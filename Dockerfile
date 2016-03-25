@@ -13,7 +13,8 @@ apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 COPY init/ /etc/my_init.d/
 COPY cron/ /etc/cron.d/
 COPY defaults/ /defaults/
-RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
+RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh && \
+chown -R -v abc:abc /defaults
 
 # Volumes and Ports
 # VOLUME /volume
