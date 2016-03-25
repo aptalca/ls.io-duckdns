@@ -42,7 +42,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application
 
 First, go to www.duckdns.org, register your subdomain and retrieve your token  
-Then run the docker dun command above with your subdomain(s) and token  
+Then run the docker create command above with your subdomain(s) and token  
 It will update your IP with the DuckDNS service every 5 minutes  
 
 
