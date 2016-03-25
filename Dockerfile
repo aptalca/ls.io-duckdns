@@ -11,11 +11,10 @@ apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 #Adding Custom files
 COPY init/ /etc/my_init.d/
-COPY  services/ /etc/service/
 COPY cron/ /etc/cron.d/
 COPY defaults/ /defaults/
 RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Volumes and Ports
-VOLUME /volume
-EXPOSE PORT
+# VOLUME /volume
+# EXPOSE PORT
