@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/defaults/duck.sh
+/sbin/setuser abc /defaults/duck.sh
