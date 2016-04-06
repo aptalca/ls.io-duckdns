@@ -10,4 +10,4 @@ else
   echo -e "SUBDOMAINS=$SUBDOMAINS TOKEN=$TOKEN" > /defaults/duck.conf
 fi
 
-/sbin/setuser abc /defaults/duck.sh
+/sbin/setuser abc /app/script/duck.sh
