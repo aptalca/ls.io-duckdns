@@ -1,1 +1,1 @@
-*/5 * * * * abc /defaults/duck.sh 2>&1 | /usr/bin/logger -t DuckDNS
+*/5 * * * * abc /app/script/duck.sh 2>&1 | /usr/bin/logger -t DuckDNS
