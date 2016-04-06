@@ -17,7 +17,7 @@ docker create \
   -e PGID=<gid> -e PUID=<uid>  \
   -e SUBDOMAINS=<subdomains> \
   -e TOKEN=<token> \
-  linuxserver/docker-duckdns
+  linuxserver/duckdns
 ```
 
 **Parameters**
