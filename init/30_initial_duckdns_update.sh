@@ -7,7 +7,7 @@ if [ -z "$SUBDOMAINS" ] || [ -z "$TOKEN" ]; then
   exit 1
 else
   echo "Retrieving subdomain and token from the environment variables"
-  echo -e "SUBDOMAINS=$SUBDOMAINS TOKEN=$TOKEN" > /defaults/duck.conf
+  echo -e "SUBDOMAINS=$SUBDOMAINS TOKEN=$TOKEN" > /config/duck.conf
 fi
 
 /sbin/setuser abc /app/script/duck.sh
