@@ -15,6 +15,7 @@ crontab /defaults/duckcron
 # permissions
 chown -R abc:abc \
 	/app
+chmod +x /app/duck.sh
 
 # run initial IP update
 exec \
