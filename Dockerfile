@@ -1,6 +1,5 @@
 FROM lsiobase/alpine
 MAINTAINER aptalca
-ARG DEBIAN_FRONTEND="noninteractive"
 
-#Adding Custom files
+# add local files
 COPY root/ /
