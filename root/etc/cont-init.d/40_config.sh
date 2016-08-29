@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bash
 
   #Check to make sure the subdomain and token are set
 if [ -z "$SUBDOMAINS" ] || [ -z "$TOKEN" ]; then
@@ -6,7 +6,16 @@ if [ -z "$SUBDOMAINS" ] || [ -z "$TOKEN" ]; then
   exit 1
 else
   echo "Retrieving subdomain and token from the environment variables"
-  echo -e "SUBDOMAINS=$SUBDOMAINS TOKEN=$TOKEN" > /config/duck.conf
+  echo -e "SUBDOMAINS=$SUBDOMAINS TOKEN=$TOKEN" > /app/duck.conf
 fi
 
-/sbin/setuser abc /app/script/duck.sh
+# set crontab
+crontab /defaults/duckcron
+
+# permissions
+chown -R abc:abc \
+	/app
+
+# run initial IP update
+exec \
+	s6-setuidgid abc /app/duck.sh
