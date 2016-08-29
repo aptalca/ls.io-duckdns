@@ -10,7 +10,7 @@ else
 fi
 
 # set crontab
-crontab /defaults/duckcron
+crontab -u abc /defaults/duckcron
 
 # permissions
 chown -R abc:abc \
